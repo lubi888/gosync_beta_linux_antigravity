@@ -55,7 +55,7 @@ var myMenuItems = <String>[
 //   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
 class GoSyncAppBar extends StatefulWidget implements PreferredSizeWidget {
-  GoSyncAppBar({super.key});
+  const GoSyncAppBar({super.key});
 
   @override
   State<GoSyncAppBar> createState() => _GoSyncAppBarState();
@@ -69,7 +69,7 @@ class GoSyncAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _GoSyncAppBarState extends State<GoSyncAppBar> {
   // Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   bool _themevalue = true;
-  bool _value = true;
+  final bool _value = true;
 
   // get _GoSyncHomeState => State<GoSyncHome>;
   @override
@@ -206,7 +206,7 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
                           'light or dark',
                           style: TextStyle(color: Colors.lightGreenAccent),
                         ),
-                        activeColor: Colors.yellowAccent,
+                        activeThumbColor: Colors.yellowAccent,
                         inactiveThumbImage: AssetImage(_kAsset1),
                         activeThumbImage: AssetImage(_kAsset2),
                         // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
@@ -242,7 +242,7 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
                           'light or dark',
                           style: TextStyle(color: Colors.lightGreenAccent),
                         ),
-                        activeColor: Colors.yellowAccent,
+                        activeThumbColor: Colors.yellowAccent,
                         inactiveThumbImage: AssetImage(_kAsset1),
                         activeThumbImage: AssetImage(_kAsset2),
                         // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),

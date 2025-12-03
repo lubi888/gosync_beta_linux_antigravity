@@ -125,7 +125,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   'light or dark',
                   style: TextStyle(color: Colors.lightGreenAccent),
                 ),
-                activeColor: Colors.yellowAccent,
+                activeThumbColor: Colors.yellowAccent,
                 inactiveThumbImage: AssetImage(_kAsset1),
                 activeThumbImage: AssetImage(_kAsset2),
                 // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
