@@ -15,7 +15,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get title => 'goSync de 240418 250528';
 
   @override
-  String get title2 => 'goSync title2';
+  String get title2 => 'goSync title2 1203';
 
   @override
   String get helloWorld => 'wie gehts flutter deutschland';

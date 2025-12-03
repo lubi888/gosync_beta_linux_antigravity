@@ -115,7 +115,7 @@ abstract class AppLocalizations {
   /// title 2 1203
   ///
   /// In en, this message translates to:
-  /// **'goSync title2'**
+  /// **'goSync title2 1203'**
   String get title2;
 
   /// hello in each language

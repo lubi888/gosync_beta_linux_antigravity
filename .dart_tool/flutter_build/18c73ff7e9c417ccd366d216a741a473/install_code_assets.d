@@ -1,0 +1,1 @@
+ /home/tortek/Documents/github/gosync_beta_linux_antigravity/.dart_tool/flutter_build/18c73ff7e9c417ccd366d216a741a473/native_assets.json: 

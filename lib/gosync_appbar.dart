@@ -69,7 +69,7 @@ class GoSyncAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _GoSyncAppBarState extends State<GoSyncAppBar> {
   // Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   bool _themevalue = true;
-  final bool _value = true;
+  // final bool _value = true;
 
   // get _GoSyncHomeState => State<GoSyncHome>;
   @override
@@ -153,224 +153,216 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
           icon: const Icon(Icons.lunch_dining), //vertical menu
           // onSelected: onSelect,
           // color: Colors.red,.
-          itemBuilder:
-              (BuildContext context) => [
-                PopupMenuItem(
-                  value: "Home",
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
-                      } else {
-                        throw 'Could not launch $link';
-                      }
-                    },
-                    // humanize: true,
-                    text: 'https://www.ethSync.org',
-                  ),
-                ),
-                const PopupMenuItem(
-                  value: "Ethereum Website",
-                  child: Text("beta"),
-                ),
-                PopupMenuItem(
-                  child: ColoredBox(
-                    color: Colors.blue,
-                    child: Material(
-                      // child: SwitchListTile(
-                      //   tileColor: Colors.yellowAccent,
-                      //   title: const Text('theme switcher'),
-                      //   value: _value,
-                      //   onChanged: (value) {
-                      //     _value = value;
-                      //     if (_value) {
-                      //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                      //     } else {
-                      //       GoSyncHome.of(
-                      //         context,
-                      //       )!.changeTheme(ThemeMode.light);
-                      //     }
-                      //   },
-                      // ),
-                      child: SwitchListTile(
-                        tileColor: Colors.deepOrange,
-                        secondary: Icon(
-                          Icons.lightbulb_outline,
-                          color: Colors.yellow,
-                        ),
-                        title: const Text(
-                          'theme switch: Day or Night',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        subtitle: const Text(
-                          'light or dark',
-                          style: TextStyle(color: Colors.lightGreenAccent),
-                        ),
-                        activeThumbColor: Colors.yellowAccent,
-                        inactiveThumbImage: AssetImage(_kAsset1),
-                        activeThumbImage: AssetImage(_kAsset2),
-                        // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                        value: _themevalue,
-                        onChanged: (value) {
-                          _themevalue = value;
-                          if (_themevalue) {
-                            GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                          } else {
-                            GoSyncHome.of(
-                              context,
-                            )!.changeTheme(ThemeMode.light);
-                          }
-                        },
-                      ),
+          itemBuilder: (BuildContext context) => [
+            PopupMenuItem(
+              value: "Home",
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                // humanize: true,
+                text: 'https://www.ethSync.org',
+              ),
+            ),
+            const PopupMenuItem(value: "Ethereum Website", child: Text("beta")),
+            PopupMenuItem(
+              child: ColoredBox(
+                color: Colors.blue,
+                child: Material(
+                  // child: SwitchListTile(
+                  //   tileColor: Colors.yellowAccent,
+                  //   title: const Text('theme switcher'),
+                  //   value: _value,
+                  //   onChanged: (value) {
+                  //     _value = value;
+                  //     if (_value) {
+                  //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                  //     } else {
+                  //       GoSyncHome.of(
+                  //         context,
+                  //       )!.changeTheme(ThemeMode.light);
+                  //     }
+                  //   },
+                  // ),
+                  child: SwitchListTile(
+                    tileColor: Colors.deepOrange,
+                    secondary: Icon(
+                      Icons.lightbulb_outline,
+                      color: Colors.yellow,
                     ),
-                  ),
-                ),
-                PopupMenuItem(
-                  child: StatefulBuilder(
-                    builder: (context, setState) {
-                      return SwitchListTile(
-                        tileColor: Colors.deepOrange,
-                        secondary: Icon(
-                          Icons.lightbulb_outline,
-                          color: Colors.yellow,
-                        ),
-                        title: const Text(
-                          'theme switch: Day or Night',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        subtitle: const Text(
-                          'light or dark',
-                          style: TextStyle(color: Colors.lightGreenAccent),
-                        ),
-                        activeThumbColor: Colors.yellowAccent,
-                        inactiveThumbImage: AssetImage(_kAsset1),
-                        activeThumbImage: AssetImage(_kAsset2),
-                        // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                        value: _themevalue,
-                        onChanged: (value) {
-                          _themevalue = value;
-                          if (_themevalue) {
-                            GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                          } else {
-                            GoSyncHome.of(
-                              context,
-                            )!.changeTheme(ThemeMode.light);
-                          }
-                        },
-                      );
-                    },
-                  ),
-                ), // PopupMenuTheme(data: data, child: child)
-                // SwitchListTile(
-                //   tileColor: Colors.deepOrange,
-                //   secondary: Icon(Icons.lightbulb_outline, color: Colors.yellow),
-                //   title: const Text(
-                //     'theme switch: Day or Night',
-                //     style: TextStyle(color: Colors.blue),
-                //   ),
-                //   subtitle: const Text(
-                //     'light or dark',
-                //     style: TextStyle(color: Colors.lightGreenAccent),
-                //   ),
-                //   activeColor: Colors.yellowAccent,
-                //   inactiveThumbImage: AssetImage(_kAsset1),
-                //   activeThumbImage: AssetImage(_kAsset2),
-                //   // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                //   value: _themevalue,
-                //   onChanged: (value) {
-                //     _themevalue = value;
-                //     if (_themevalue) {
-                //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                //     } else {
-                //       GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
-                //     }
-                //   },
-                // ),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
+                    title: const Text(
+                      'theme switch: Day or Night',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    subtitle: const Text(
+                      'light or dark',
+                      style: TextStyle(color: Colors.lightGreenAccent),
+                    ),
+                    activeThumbColor: Colors.yellowAccent,
+                    inactiveThumbImage: AssetImage(_kAsset1),
+                    activeThumbImage: AssetImage(_kAsset2),
+                    // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
+                    value: _themevalue,
+                    onChanged: (value) {
+                      _themevalue = value;
+                      if (_themevalue) {
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                       } else {
-                        throw 'Could not launch $link';
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
                       }
                     },
-                    // humanize: true,
-                    // text: EthSyncUrl.launchURLFlutter,
-                    text: 'https://www.ethereum.org',
                   ),
                 ),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
+              ),
+            ),
+            PopupMenuItem(
+              child: StatefulBuilder(
+                builder: (context, setState) {
+                  return SwitchListTile(
+                    tileColor: Colors.deepOrange,
+                    secondary: Icon(
+                      Icons.lightbulb_outline,
+                      color: Colors.yellow,
+                    ),
+                    title: const Text(
+                      'theme switch: Day or Night',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    subtitle: const Text(
+                      'light or dark',
+                      style: TextStyle(color: Colors.lightGreenAccent),
+                    ),
+                    activeThumbColor: Colors.yellowAccent,
+                    inactiveThumbImage: AssetImage(_kAsset1),
+                    activeThumbImage: AssetImage(_kAsset2),
+                    // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
+                    value: _themevalue,
+                    onChanged: (value) {
+                      _themevalue = value;
+                      if (_themevalue) {
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                       } else {
-                        throw 'Could not launch $link';
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
                       }
                     },
-                    // humanize: true,
-                    text: 'https://ethereum.stackexchange.com/',
-                  ),
-                ),
-                const PopupMenuDivider(),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
-                      } else {
-                        throw 'Could not launch $link';
-                      }
-                    },
-                    text: 'https://geth.ethereum.org/',
-                  ),
-                ),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
-                      } else {
-                        throw 'Could not launch $link';
-                      }
-                    },
-                    text: 'https://github.com/ethereum/go-ethereum',
-                  ),
-                ),
-                const PopupMenuDivider(height: 4.0),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
-                      } else {
-                        throw 'Could not launch $link';
-                      }
-                    },
-                    text: 'https://en.wikipedia.org/wiki/Ethereum',
-                  ),
-                ),
-                const PopupMenuItem(
-                  child: Icon(Icons.settings, color: Colors.redAccent),
-                ),
-                const PopupMenuItem(child: Text('Settings')),
-                const PopupMenuItem(child: Text('French : Francais : FR')),
-                const PopupMenuItem(child: Text('German : Deutsch : DE')),
-                PopupMenuItem(
-                  child: Linkify(
-                    onOpen: (link) async {
-                      if (await canLaunchUrl(link.url as Uri)) {
-                        await launchUrl(link.url as Uri);
-                      } else {
-                        throw 'Could not launch $link';
-                      }
-                    },
-                    // humanize: true,
-                    text: 'https://ethsync2022.org/',
-                  ),
-                ),
-              ],
+                  );
+                },
+              ),
+            ), // PopupMenuTheme(data: data, child: child)
+            // SwitchListTile(
+            //   tileColor: Colors.deepOrange,
+            //   secondary: Icon(Icons.lightbulb_outline, color: Colors.yellow),
+            //   title: const Text(
+            //     'theme switch: Day or Night',
+            //     style: TextStyle(color: Colors.blue),
+            //   ),
+            //   subtitle: const Text(
+            //     'light or dark',
+            //     style: TextStyle(color: Colors.lightGreenAccent),
+            //   ),
+            //   activeColor: Colors.yellowAccent,
+            //   inactiveThumbImage: AssetImage(_kAsset1),
+            //   activeThumbImage: AssetImage(_kAsset2),
+            //   // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
+            //   value: _themevalue,
+            //   onChanged: (value) {
+            //     _themevalue = value;
+            //     if (_themevalue) {
+            //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+            //     } else {
+            //       GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+            //     }
+            //   },
+            // ),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                // humanize: true,
+                // text: EthSyncUrl.launchURLFlutter,
+                text: 'https://www.ethereum.org',
+              ),
+            ),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                // humanize: true,
+                text: 'https://ethereum.stackexchange.com/',
+              ),
+            ),
+            const PopupMenuDivider(),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                text: 'https://geth.ethereum.org/',
+              ),
+            ),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                text: 'https://github.com/ethereum/go-ethereum',
+              ),
+            ),
+            const PopupMenuDivider(height: 4.0),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                text: 'https://en.wikipedia.org/wiki/Ethereum',
+              ),
+            ),
+            const PopupMenuItem(
+              child: Icon(Icons.settings, color: Colors.redAccent),
+            ),
+            const PopupMenuItem(child: Text('Settings')),
+            const PopupMenuItem(child: Text('French : Francais : FR')),
+            const PopupMenuItem(child: Text('German : Deutsch : DE')),
+            PopupMenuItem(
+              child: Linkify(
+                onOpen: (link) async {
+                  if (await canLaunchUrl(link.url as Uri)) {
+                    await launchUrl(link.url as Uri);
+                  } else {
+                    throw 'Could not launch $link';
+                  }
+                },
+                // humanize: true,
+                text: 'https://ethsync2022.org/',
+              ),
+            ),
+          ],
         ),
       ],
     );

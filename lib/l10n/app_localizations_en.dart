@@ -15,7 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get title => 'goSync';
 
   @override
-  String get title2 => 'goSync title2';
+  String get title2 => 'goSync title2 1203';
 
   @override
   String get helloWorld => 'hello flutter eng';

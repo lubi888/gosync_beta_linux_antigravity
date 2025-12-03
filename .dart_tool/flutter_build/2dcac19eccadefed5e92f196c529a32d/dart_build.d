@@ -1,0 +1,1 @@
+ /home/tortek/Documents/github/gosync_beta_linux_antigravity/.dart_tool/flutter_build/2dcac19eccadefed5e92f196c529a32d/dart_build_result.json: 

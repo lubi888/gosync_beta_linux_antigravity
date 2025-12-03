@@ -12,10 +12,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get titledate => 'goSync251203Antigravity';
 
   @override
-  String get title => 'gosync.go francais 2024.04.03';
+  String get title => 'gosync.go francais 2025.';
 
   @override
-  String get title2 => 'goSync title2';
+  String get title2 => 'goSync title2 1203';
 
   @override
   String get helloWorld => 'bonjour mec flutter francais';
