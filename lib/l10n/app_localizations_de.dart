@@ -9,13 +9,13 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get titledate => 'goSync251204Aniigravity';
+  String get titledate => 'goSync251205Aniigravity';
 
   @override
   String get title => 'goSync de 240418 250528';
 
   @override
-  String get title2 => 'goSync title2 1204';
+  String get title2 => 'goSync title2 1205';
 
   @override
   String get helloWorld => 'wie gehts flutter deutschland';
